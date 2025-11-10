@@ -1,0 +1,16 @@
+
+function App() {
+const location = useLocation();
+const isProjectNotHide = location.pathname.startsWith('/project');
+console.log(location)
+
+ return (
+  <div className='min-h-full w-full select-none bg-[#121212] overflow-x-hidden text-white'>
+    <HeaderSection/>
+   {isProjectNotHide? <AppRoutes/> : <><HeroSection/> <MainSection/></>}
+    <Footer/>
+  </div>
+ )
+}
+
+export default App
