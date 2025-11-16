@@ -2,10 +2,20 @@
 
 
 /* Custom scrollbar */
+
 .custom-scrollbar::-webkit-scrollbar {
   height: 16px;
   width: 16px;
 }
+
+@media (max-width: 800) {
+  .custom-scrollbar-mobile::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+}
+
+
 
 /* Scrollbar track */
 .custom-scrollbar::-webkit-scrollbar-track {

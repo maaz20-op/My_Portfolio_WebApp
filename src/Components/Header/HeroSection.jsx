@@ -47,7 +47,7 @@ return (
     </div>
        <div className="lg:h-[80%] h-[50%] lg:p-0   p-7 w-full flex  justify-start lg:justify-center items-center lg:mt-16 lg:w-[44%]">
         <div className="lg:h-[500px] lg:w-[500px] relative over  h-[300px] w-[300px] rounded-[50%] bg-[#232222cc]">
-            <img  className='lg:h-[700px]  h-[450px] object-cover rounded-b-full  absolute bottom-0 ' src=" https://res.cloudinary.com/ddl6cgcbp/image/upload/q_auto,f_auto/v1762598758/ReelNest/images/zmgqchp0xwttq5pretea.png" alt="My Image" />
+            <img  className='lg:h-[700px]  h-[450px] object-cover rounded-b-full  absolute bottom-0 ' src="https://res.cloudinary.com/ddl6cgcbp/image/upload/v1763271304/ReelNest/images/rgxbir6vdmdv47rfsmxo.png" alt="My Image" />
            </div>
        </div>
     </div>
