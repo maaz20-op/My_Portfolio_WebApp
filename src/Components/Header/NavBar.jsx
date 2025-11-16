@@ -15,7 +15,7 @@ function onClick() {
         <div className="lg:h-[10vh] select-none   py-6 px-10 lg:py-0 lg:w-full flex  justify-between lg:items-center lg:px-23 lg:font-bold">
     
               <h1 className="text-amber-50 text-2xl font-bold lg:text-xl">Maaz Devs</h1>
-           <ul className={` ${isMenuHidden?"right-[-50vw]  lg:flex lg:flex-row  lg:right-0 hidden ":"right-0 block  z-999 lg:flex lg:flex-row"} transition-opacity ease-in-out duration-1150 absolute top-[12vh]   text-center lg:bg-transparent lg:flex-row lg:px-0 text lg:py-0 px-8 py-5 flex-col gap-4 bg-[#1b1a1a3f]  lg:relative lg:top-0 flex lg:gap-20 lg:text-xs lg:items-center text-[#cccccc]`}>
+           <ul className={` ${isMenuHidden?"right-[-50vw]  lg:flex lg:flex-row lg:z-99999  lg:right-0 hidden ":"right-0 block  z-999 lg:flex lg:flex-row"} transition-opacity ease-in-out duration-1150 absolute top-[12vh]   text-center lg:bg-transparent lg:flex-row lg:px-0 text lg:py-0 px-8 py-5 flex-col gap-4 bg-[#1b1a1a3f]  lg:relative lg:top-0 flex lg:gap-20 lg:text-xs lg:items-center text-[#cccccc]`}>
             <li className="text-[#ff9633]">Home</li>
             <li onClick={scrollToProjects}>Projects</li>
             <li onClick={scrollToServices}>Services</li>
