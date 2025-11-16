@@ -1,5 +1,7 @@
 import React from "react";
 import LinksButtons from "../utils/buttonsLinks";
+import BackButton from "../utils/backButton";
+import { useRef, useEffect } from "react";
 
 
 const Project1 = () => {
@@ -79,31 +81,53 @@ const Project1 = () => {
     },
   ];
 
+  const useRef2 = useRef(null)
+
+  useEffect(() => {
+    useRef2.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []); 
+
+
+
+
   return (
-    <div className="min-h-screen text-gray-200 flex flex-col items-center p-6 font-sans">
+    <div ref={useRef2} className="min-h-screen text-gray-200 flex flex-col items-center p-6 font-sans">
+    <BackButton/>
       {/* Header Section */}
       <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6 text-center">
         ReelNest Web App
       </h1>
-
-      <div className="flex h-[30vh] lg:h-[40vh] gap-6 items-center w-[300px] lg:w-[700px] overflow-x-scroll custom-scrollbar">
+ <div className="flex lg:flex-row flex-col  gap-6">
+  <div className="flex h-[18vh] lg:h-[40vh] gap-6 items-center w-[400px] lg:w-[600px]">
+    <video
+  muted 
+  controls
+  loop 
+  playsInline
+  className="w-full h-full object-cover rounded-2xl"
+>
+  <source src="https://res.cloudinary.com/ddl6cgcbp/video/upload/q_auto,f_auto/v1763264712/ReelNest/videos/mri6le0hrnygreqhya3h.mp4" type="video/mp4" />
+</video>
+</div>
+      <div className="flex h-[20vh] lg:h-[40vh] gap-6 items-center w-[390px] lg:w-[700px] overflow-x-scroll custom-scrollbar">
         {[
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s",
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s",
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s",
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s",
+          "https://i.postimg.cc/c1jmKJ8L/reelnest-5.png",
+          "https://i.postimg.cc/7PpWF991/reelnest-1.png",
+          "https://i.postimg.cc/YSZ96TNY/reelnest-2.png",
+          "https://i.postimg.cc/y69PZHh9/reelnest-4.png",
+          "https://i.postimg.cc/SN2gV9pJ/reelnest-3.png",
         ].map((src, indx) => (
           <img
             key={indx}
             src={src}
             alt="Planet illustration"
-            className="flex-shrink-0 rounded-lg object-cover lg:mb-6 h-[80%] lg:h-[90%] w-[80%]"
+            className="flex-shrink-0 rounded-lg object-cover lg:mb-6 h-[70%] lg:h-[90%] w-[70%]"
           />
         ))}
       </div>
-
+</div>
       {/* Subtitle */}
-      <p className="text-lg text-gray-300 text-center mb-8">
+      <p className="text-lg text-gray-300 text-center mt-5 mb-8">
         Full-Stack Social Media App
       </p>
 
@@ -130,17 +154,17 @@ const Project1 = () => {
       {/* Preview Images */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s"
+          src="https://i.postimg.cc/c1jmKJ8L/reelnest-5.png"
           alt="Dashboard"
-          className="w-64 h-40 object-cover rounded-lg"
+          className="w-78 h-40 object-cover rounded-lg"
         />
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s"
+          src="https://i.postimg.cc/7PpWF991/reelnest-1.png"
           alt="Analytics"
           className="w-64 h-40 object-cover rounded-lg"
         />
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq5Xskr9aAmAjRnicAAPd73X5nChpWUhgMWw&s"
+          src="https://i.postimg.cc/y69PZHh9/reelnest-4.png"
           alt="Settings"
           className="w-64 h-40 object-cover rounded-lg"
         />
