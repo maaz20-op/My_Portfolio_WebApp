@@ -98,7 +98,7 @@ const Project1 = () => {
         ReelNest Web App
       </h1>
  <div className="flex lg:flex-row flex-col  gap-6">
-  <div className="flex h-[18vh] lg:h-[40vh] gap-6 items-center w-[400px] lg:w-[600px]">
+  <div className="flex h-[200px] lg:h-[40vh] gap-6 items-center w-[300px] lg:w-[600px]">
     <video
   muted 
   controls
@@ -109,7 +109,7 @@ const Project1 = () => {
   <source src="https://res.cloudinary.com/ddl6cgcbp/video/upload/q_auto,f_auto/v1763264712/ReelNest/videos/mri6le0hrnygreqhya3h.mp4" type="video/mp4" />
 </video>
 </div>
-      <div className="flex h-[20vh] lg:h-[40vh] gap-6 items-center w-[390px] lg:w-[700px] overflow-x-scroll custom-scrollbar">
+      <div className="flex h-[250px] lg:h-[40vh] gap-6 items-center w-[300px] lg:w-[700px] overflow-x-scroll custom-scrollbar">
         {[
           "https://i.postimg.cc/c1jmKJ8L/reelnest-5.png",
           "https://i.postimg.cc/7PpWF991/reelnest-1.png",
@@ -121,7 +121,7 @@ const Project1 = () => {
             key={indx}
             src={src}
             alt="Planet illustration"
-            className="flex-shrink-0 rounded-lg object-cover lg:mb-6 h-[70%] lg:h-[90%] w-[70%]"
+            className="flex-shrink-0 rounded-lg object-cover lg:mb-6 h-[165px] lg:h-[90%] w-[320px] lg:w-[70%]"
           />
         ))}
       </div>
