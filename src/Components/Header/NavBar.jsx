@@ -21,7 +21,10 @@ function onClick() {
             <li onClick={scrollToServices}>Services</li>
          <li onClick={scrollToAbout}>About</li>
             <li onClick={scrollToSkills}>Skills</li>
-            <li onClick={scrollToContact}>Contact Me</li>
+            <li onClick={function(){
+                scrollToContact();
+                console.log("clicked contact ")
+            }}>Contact Me</li>
            </ul>
          <div className='flex  items-center gap-3'>
            <button className="bg-[#ff9633] px-2 py-2 hidden lg:block lg:px-6 lg:text-xs lg:py-2.5 text-white rounded">Hire Me</button>

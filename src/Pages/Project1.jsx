@@ -202,9 +202,7 @@ const Project1 = () => {
      
 
       {/* Back Button */}
-      <button className="text-orange-400 hover:underline flex items-center gap-2">
-        ← Back
-      </button>
+    <BackButton/>
     </div>
   );
 };

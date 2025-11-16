@@ -33,22 +33,23 @@ function scrollToContact() { ContactRef.current?.scrollIntoView({ behavior: "smo
 
  return (
   <div className='min-h-full w-full select-none bg-[#121212] overflow-x-hidden text-white'>
-    <NavBar
+   
+   {isProjectNotHide? 
+   <AppRoutes/> :
+    <>
+     <NavBar
  scrollToProjects={scrollToProjects}
   scrollToAbout={scrollToAbout}
   scrollToSkills={scrollToSkills}
   scrollToServices={scrollToServices}
   scrollToContact={scrollToContact}
     />
-   {isProjectNotHide? 
-   <AppRoutes/> :
-    <>
     <HeroSection/>
    <div className="lg:h-[200vh] h-[220vh] flex flex-col w-[88vw] lg:border p-6 lg:mx-auto mt-15  lg:border-orange-400  rounded-2xl ">
 <About sectionRefrence={aboutRef}/>
+  <Projects  sectionRefrence={projectsRef}/>
 <Skills  sectionRefrence={skillsRef}/>
 <Services  sectionRefrence={ServicesRef}/>
-  <Projects  sectionRefrence={projectsRef}/>
    </div>
    </>
    }
