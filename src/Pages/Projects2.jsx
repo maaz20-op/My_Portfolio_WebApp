@@ -223,4 +223,4 @@ const Project2 = () => {
   );
 };
 
-export default Project1;
+export default Project2;
