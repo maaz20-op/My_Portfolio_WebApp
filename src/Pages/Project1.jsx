@@ -7,74 +7,121 @@ const keyFeatures = [
   {
     title: "Core Platform",
     items: [
-      "Full-stack social media platform for sharing images and short videos",
-      "Mobile-first UI/UX optimized for smooth scrolling & interaction",
-      "Server-side rendering using EJS for fast initial page loads",
+      "Production-ready full-stack social media platform built with React, Node.js, Express.js, and MongoDB",
+      "Modern React CSR architecture with fully responsive UI for desktop and mobile",
+      "Users can create, share, discover, and interact with image and video content",
     ],
   },
+
   {
-    title: "User Accounts & Authentication",
+    title: "Authentication & Account Security",
     items: [
-      "Secure user authentication with JWT + cookies",
-      "Password hashing (bcrypt) for account protection",
-      "Profile pages with user bio, picture, and posts grid",
-      "Follow system (future-ready design) for scaling to social graph interactions",
+      "Local authentication with secure HTTP-only cookies",
+      "Google OAuth authentication using Passport.js",
+      "OTP verification and forgot-password flow",
+      "Account privacy with public/private profiles",
+      "Protected routes, authorization, and account-level access control",
     ],
   },
+
   {
-    title: "Post System",
+    title: "Social Features",
     items: [
-      "Users can upload images and videos",
-      "Uploads are stored and optimized using Cloudinary CDN",
-      "Video player with auto-play/pause on scroll, seek/progress control, and Mute/Unmute toggle",
-      "Posts support Like, Comment, and Share actions",
+      "Create and share image and video posts",
+      "Like, comment, save, and share posts",
+      "Follow/unfollow system with followers and following management",
+      "Search users and posts",
+      "Block and unblock users",
+      "Private account support with controlled content visibility",
     ],
   },
+
   {
-    title: "Real-Time Interactions",
+    title: "Real-Time Messaging & Video Calling",
     items: [
-      "Dynamic like & comment updates without page reload",
-      "Comment section uses event delegation for scalable DOM efficiency",
+      "Real-time one-to-one messaging powered by Socket.IO",
+      "Message timestamps, deletion, and active-friend presence",
+      "Real-time WebRTC video calling",
+      "Socket.IO signaling for WebRTC connection establishment",
+      "Metered.ca TURN server integration for reliable peer-to-peer connections",
     ],
   },
+
   {
-    title: "Search & Explore",
+    title: "AI-Assisted Content Creation",
     items: [
-      "Search posts by caption / prompt / tags",
-      "Search users by username or display name",
-      "Optimized using MongoDB text queries / (Atlas Search optional)",
+      "AI-assisted post creation to help users generate content",
+      "Prompt-based content generation integrated into the posting workflow",
+      "Generated media can be uploaded and published through the platform",
     ],
   },
+
   {
-    title: "AI Image Generation (Premium Feature)",
+    title: "Media Upload & Processing",
     items: [
-      "Built-in AI image creation using prompt input",
-      "Generated images automatically uploaded and displayed in feed",
-      "Credits/usage handled per account plan",
+      "Image and video uploads using Multer and Cloudinary",
+      "Cloudinary CDN integration for optimized media delivery",
+      "Video playback with autoplay/pause behavior based on scrolling",
+      "Media-focused feed experience optimized for smooth interaction",
     ],
   },
+
   {
-    title: "Premium Subscription System",
+    title: "Performance & Optimization",
     items: [
-      "Free vs Premium account tiers",
-      "Premium users get higher upload limits, access to AI features, faster processing & priority queue",
-      "Payment integration options prepared (Stripe / JazzCash / EasyPaisa)",
+      "RTK Query caching for efficient API data management",
+      "Optimistic UI updates for faster user interactions",
+      "Infinite scrolling for large social feeds",
+      "Feed virtualization using react-virtuoso",
+      "React.lazy and code splitting for optimized bundle loading",
+      "useMemo and useCallback for reducing unnecessary computations and renders",
+      "Render profiling and build-size analysis",
+      "Error Boundaries for improved application stability",
     ],
   },
+
   {
-    title: "Background Job Queues & Email Notifications",
+    title: "Backend & API Architecture",
     items: [
-      "Heavy tasks like video processing, AI image generation, and email notifications handled using Redis-based Bull queue",
-      "Welcome email on signup and login alert email for security",
-      "Uses Nodemailer / Resend for reliable delivery",
+      "RESTful API architecture built with Node.js and Express.js",
+      "Versioned APIs for maintainable backend development",
+      "MongoDB with Mongoose for scalable data management",
+      "MongoDB aggregation pipelines for complex data operations",
+      "Database indexing for improved query performance",
+      "Cloudinary and Multer integration for media handling",
     ],
   },
+
   {
-    title: "Security & Validation",
+    title: "Background Jobs & Notifications",
     items: [
-      "Protected routes for all user features",
-      "Secure cookies to prevent unauthorized session access",
-      "Input validation to prevent malformed requests",
+      "BullMQ and Redis for processing background and asynchronous jobs",
+      "Background processing for resource-intensive operations",
+      "Nodemailer integration for transactional email notifications",
+      "Asynchronous job architecture designed to keep API requests responsive",
+    ],
+  },
+
+  {
+    title: "Security",
+    items: [
+      "HTTP-only secure cookies for authentication",
+      "Password hashing using bcrypt",
+      "Rate limiting to reduce abusive requests",
+      "Helmet for HTTP security headers",
+      "CORS configuration for controlled cross-origin access",
+      "Input validation and sanitization",
+      "Protected routes and authorization middleware",
+    ],
+  },
+
+  {
+    title: "Deployment & Production",
+    items: [
+      "Production frontend deployed on Vercel",
+      "Production backend deployed on Railway",
+      "Separate frontend and backend deployment architecture",
+      "Production-focused API, authentication, media, and real-time communication setup",
     ],
   },
 ];
@@ -106,18 +153,29 @@ const Project1 = () => {
             className="w-full h-full object-cover rounded-2xl"
           >
             <source
-              src="https://res.cloudinary.com/ddl6cgcbp/video/upload/q_auto,f_auto/v1763264712/ReelNest/videos/mri6le0hrnygreqhya3h.mp4"
+              src="https://res.cloudinary.com/ddl6cgcbp/video/upload/q_auto:best,f_auto/v1787614442/ReelNest/videos/hbvq1mybr39htafsyuir.mp4"
               type="video/mp4"
             />
           </video>
         </div>
         <div className="flex h-[250px] lg:h-[40vh] gap-6 items-center w-[300px] lg:w-[700px] overflow-x-scroll custom-scrollbar">
           {[
-            "https://i.postimg.cc/c1jmKJ8L/reelnest-5.png",
-            "https://i.postimg.cc/7PpWF991/reelnest-1.png",
-            "https://i.postimg.cc/YSZ96TNY/reelnest-2.png",
-            "https://i.postimg.cc/y69PZHh9/reelnest-4.png",
-            "https://i.postimg.cc/SN2gV9pJ/reelnest-3.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608052/client_-_Google_Chrome_8_25_2026_2_30_02_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608382/client_-_Google_Chrome_8_25_2026_2_32_05_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608288/Glory_Collections_-_Google_Chrome_8_24_2026_4_12_13_PM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787609243/client_-_Google_Chrome_8_25_2026_3_05_12_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608536/client_-_Google_Chrome_8_25_2026_2_31_02_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787607879/client_-_Google_Chrome_8_25_2026_2_30_43_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608667/Glory_Collections_-_Google_Chrome_8_24_2026_4_03_15_PM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608667/Glory_Collections_-_Google_Chrome_8_24_2026_4_03_15_PM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608451/client_-_Google_Chrome_8_25_2026_2_34_22_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608786/client_-_Google_Chrome_8_25_2026_2_31_23_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608908/client_-_Google_Chrome_8_25_2026_2_32_42_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608946/client_-_Google_Chrome_8_25_2026_2_33_50_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787609595/client_-_Google_Chrome_8_25_2026_2_33_31_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787609869/client_-_Google_Chrome_8_25_2026_3_15_56_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787619016/client_-_Google_Chrome_8_25_2026_5_49_49_AM.png",
+            "https://res.cloudinary.com/dqtwdhjup/image/upload/v1787610008/client_-_Google_Chrome_8_25_2026_3_16_20_AM.png",
           ].map((src, indx) => (
             <img
               key={indx}
@@ -134,7 +192,11 @@ const Project1 = () => {
       </p>
 
       {/* Buttons */}
-      <LinksButtons />
+      <LinksButtons
+        clientURLGithub="https://github.com/maaz20-op/ReelNest_Frontend"
+        serverURLGithub="https://github.com/maaz20-op/ReelNest_Backend"
+        liveDemoURL="https://reel-nest-frontend.vercel.app/"
+      />
 
       {/* Key Features */}
       <div className="max-w-2xl w-full mb-10">
@@ -155,17 +217,17 @@ const Project1 = () => {
       {/* Preview Images */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
         <img
-          src="https://i.postimg.cc/c1jmKJ8L/reelnest-5.png"
+          src="https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608052/client_-_Google_Chrome_8_25_2026_2_30_02_AM.png"
           alt="Dashboard"
           className="w-78 h-40 object-cover rounded-lg"
         />
         <img
-          src="https://i.postimg.cc/7PpWF991/reelnest-1.png"
+          src="https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608288/Glory_Collections_-_Google_Chrome_8_24_2026_4_12_13_PM.png"
           alt="Analytics"
           className="w-64 h-40 object-cover rounded-lg"
         />
         <img
-          src="https://i.postimg.cc/y69PZHh9/reelnest-4.png"
+          src="https://res.cloudinary.com/dqtwdhjup/image/upload/v1787608382/client_-_Google_Chrome_8_25_2026_2_32_05_AM.png"
           alt="Settings"
           className="w-64 h-40 object-cover rounded-lg"
         />
@@ -178,16 +240,28 @@ const Project1 = () => {
         </h2>
         <div className="flex flex-wrap lg:w-[600px] justify-center gap-3">
           {[
-            " EJS, CSS, JS",
-            "Express.JS",
+            "React.js",
+            "Vite",
+            "Tailwind CSS",
             "Node.js",
+            "Express.js",
             "MongoDB",
-            "Nginx LoadBalancing",
-            "Redis Caching",
-            "Clouldinary Storage",
-            "Passport.JS Authentication",
-            "Payment Stripe.JS",
-            "Huggy Face Ai",
+            "Mongoose",
+            "Socket.IO",
+            "WebRTC",
+            "Metered TURN",
+            "RTK Query",
+            "Redis",
+            "BullMQ",
+            "Cloudinary",
+            "Multer",
+            "Passport.js",
+            "Google OAuth",
+            "JWT",
+            "Nodemailer",
+            "React Virtuoso",
+            "Vercel",
+            "Railway",
           ].map((tech) => (
             <span
               key={tech}
@@ -205,17 +279,24 @@ const Project1 = () => {
           Project Description
         </h2>
         <p className="text-gray-300">
-          ReelNest is a full-stack social media platform focused on sharing
-          short videos and images. It includes secure user authentication, a
-          mobile-optimized feed, interactive post features (like, comment,
-          share), Cloudinary-based media handling, and a premium upgrade system
-          offering AI image generation and faster processing. Built with
-          Node.js, Express, MongoDB, and Redis queues for scalable performance
+          ReelNest is a production-ready full-stack social media platform for
+          sharing images and short videos. It features secure authentication
+          with Google OAuth, OTP, and forgot-password flows, real-time messaging
+          and WebRTC video calling, social interactions, private accounts,
+          follow/unfollow, saved posts, search, and block/unblock functionality.
+          Built with React, Node.js, Express, MongoDB, Socket.IO, Cloudinary,
+          Redis, and BullMQ, ReelNest also uses RTK Query, infinite scrolling,
+          feed virtualization, optimistic updates, and code splitting for a
+          scalable and performant user experience.
         </p>
       </div>
 
       {/* Buttons */}
-      <LinksButtons />
+      <LinksButtons
+        clientURLGithub="https://github.com/maaz20-op/ReelNest_Frontend"
+        serverURLGithub="https://github.com/maaz20-op/ReelNest_Backend"
+        liveDemoURL="https://reel-nest-frontend.vercel.app/"
+      />
 
       {/* Back Button */}
       <BackButton />
